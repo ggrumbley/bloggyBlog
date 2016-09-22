@@ -11,8 +11,8 @@ def send_async_email(app, msg):
 
 def send_email(to, subject, template, **kwargs):
     app = current_app._get_current_object()
-    msg = Message(app.config['BLOGGY_MAIL_SUBJECT_PREFIX'] + ' ' + subject,
-                  sender=app.config['BLOGGY_MAIL_SENDER'], recipients=[to])
+    msg = Message(app.config['BloggyBLOG_MAIL_SUBJECT_PREFIX'] + ' ' + subject,
+                  sender=app.config['BloggyBLOG_MAIL_SENDER'], recipients=[to])
     msg.body = render_template(template + '.txt', **kwargs)
     msg.html = render_template(template + '.html', **kwargs)
     thr = Thread(target=send_async_email, args=[app, msg])

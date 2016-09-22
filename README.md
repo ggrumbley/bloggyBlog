@@ -1,3 +1,3 @@
-# BloggyBlog
+BloggyBLOG
+======
 
-A personal Blogging app. Built on Flask!

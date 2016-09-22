@@ -9,6 +9,9 @@ class Config:
     BLOGGY_MAIL_SUBJECT_PREFIX = '[BloggyBlog]'
     BLOGGY_MAIL_SENDER = 'Bloggy Admin <dobber187@gmail.com>'
     BLOGGY_ADMIN = os.environ.get('BLOGGY_ADMIN')
+    BLOGGY_POSTS_PER_PAGE = 20
+    BLOGGY_FOLLOWERS_PER_PAGE = 50
+    BLOGGY_FOLLOWER_PER_PAGE = 30
 
     @staticmethod
     def init_app(app):
